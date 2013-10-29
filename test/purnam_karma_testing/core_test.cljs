@@ -1,5 +1,6 @@
 (ns purnam-karma-testing.core-test
-  (:use [purnam.cljs :only [aget-in aset-in]])
+  (:require [purnam.cljs :refer [aget-in aset-in]]
+            [purnam-karma-testing.core :refer [add5]])
   (:require-macros [purnam.js :as j])
   (:use-macros [purnam.js :only [obj arr ! f.n def.n]]
                [purnam.test :only [init describe it is is-not
@@ -9,11 +10,16 @@
 (init)
 
 (describe
-  (it "FIX THIS: One Plus One Equals..." 
+  (it "FIX THIS: One Plus One Equals... " 
      (is (+ 1 1) 11)))
 
 (describe
- {:doc "More One Plus One Examples:"
+  (it "FIX THIS: add5... " 
+     (is (add5 10)  15) 
+     (is (add5 100) 150)))
+
+(describe
+ {:doc "One Plus One Examples:"
   :globals [one-plus-one (+ 1 1)]}
  (it "One plus one is:" 
    (is one-plus-one 2)

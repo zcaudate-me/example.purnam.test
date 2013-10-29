@@ -3,6 +3,7 @@
 /checkouts
 pom.xml
 pom.xml.asc
+karma-test.js
 *.jar
 *.class
 /.lein-*

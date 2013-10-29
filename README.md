@@ -1,6 +1,6 @@
 # purnam-karma-testing
 
-Example of how to test clojurescript code using the karma test framework
+Example of how to test clojurescript code using the karma test framework.
 
 ## Usage
 
@@ -14,6 +14,7 @@ In a new window in the same directory:
 
     > karma start
 
+Tests are defined in `test/purnam_karma_testing/core_test.cljs`
 
 ## License
 

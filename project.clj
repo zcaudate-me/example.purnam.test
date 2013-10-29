@@ -9,7 +9,7 @@
   
   :cljsbuild
   {:builds  [{:source-paths ["src" "test"],
-              :id "karma-testing",
+              :id "karma-test",
               :compiler {:pretty-print true,
-                         :output-to "resources/public/karma-test.js",
+                         :output-to "karma-test.js",
                          :optimizations :whitespace}}]})
