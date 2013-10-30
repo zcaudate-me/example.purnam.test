@@ -16,6 +16,8 @@ In a new window in the same directory:
 
 Tests are defined in `test/purnam_karma_testing/core_test.cljs`.
 
+## Tutorial
+
 There is a quick video showing how to get the testing framework set up and a typical workflow:
 [![ScreenShot](https://raw.github.com/zcaudate/puram-karma-testing/master/karma-testing.png)](http://www.youtube.com/watch?v=mhBqjJUYY6w)
 
