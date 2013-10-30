@@ -11,12 +11,13 @@
 
 (describe
   (it "FIX THIS: One Plus One Equals... " 
-     (is (+ 1 1) 11)))
+     (is (+ 1 1) 2)))
 
 (describe
   (it "FIX THIS: add5... " 
      (is (add5 10)  15) 
-     (is (add5 100) 150)))
+     (is (add5 100) 105)
+     (is (add5 1000) 1005)))
 
 (describe
  {:doc "One Plus One Examples:"
