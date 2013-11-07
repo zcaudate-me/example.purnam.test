@@ -15,7 +15,8 @@
 
 (def o {:a 1 :b 2 :c 3})
 
-(facts [[{:doc "Basic Hashmaps"}]]
+(facts [[{:doc "Basic Hashmaps"
+          :globals [o {:a 1 :b 2 :c 3}]}]]
   (o :a)       => 1 
   (o :a)       => #(not= 0 %)
   (get o :b)   => 2
