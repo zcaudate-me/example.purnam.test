@@ -8,9 +8,9 @@
 
 [[:chapter {:title "testing clojure"}]]
 
-"We now test 'pure' clojurescript hashmaps"
+[[:section {:title "'pure' clojurescript hashmaps"}]]
 
-(fact [[{:doc "Basic Hashmaps"
+(facts [[{:doc "Basic Hashmaps"
           :globals [o {:a 1 :b 2 :c 3}]}]]
   (o :a)       => 1 
   (o :a)       => #(not= 0 %)
@@ -19,30 +19,31 @@
   (select-keys o [:a :b]) => {:a 1 :b 2})
 
 
-"We now test native javascript objects"
+[[:section {:title "native javascript objects"}]]
 
 (facts [[{:doc "an example test description"
-         :globals [ka "a"
+          :globals [ka "a"
                    kb "b"]
-         :vars [o (obj :a 1 :b 2 :c 3)]}]]
+          :vars [o (obj :a 1 :b 2 :c 3)]}]]
 
- "dot notation for native objects"
+ [[:subsection {:title "dot notation for native objects"}]]
  o.a => 1
  (+ o.a o.b o.c) => 6
 
- "support for both native and cljs comparisons"
+
+ [[:subsection {:title "support for both native and cljs comparisons"}]]
  o => (obj :a 1 :b 2 :c 3)
  [1 2 3 4] => [1 2 3 4]
 
- "support for function comparison"
+ [[:subsection {:title "support for function comparison"}]]
   2 => even?
   3 => (comp not even?)
 
- "globals"
+  [[:subsection {:title "globals can be accessed"}]]
   o.|ka| => 1
   (+ o.|ka| o.|kb|) => 3
 
-  "vars are allowed to be rebound"
+  [[:subsection {:title "vars can be rebound"}]]
   (! o (arr [1 2 3]
             [4 5 6]
             [7 8 9]))
