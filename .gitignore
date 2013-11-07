@@ -1,9 +1,11 @@
 /target
 /classes
 /checkouts
+/doc
 pom.xml
 pom.xml.asc
 karma-test.js
+.DS_Store
 *.jar
 *.class
 /.lein-*
