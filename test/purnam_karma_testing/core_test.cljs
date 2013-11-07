@@ -3,8 +3,7 @@
             [purnam-karma-testing.core :refer [add5]])
   (:require-macros [purnam.js :as j])
   (:use-macros [purnam.js :only [obj arr ! f.n def.n]]
-               [purnam.test :only [init describe it is is-not
-                                   is-equal is-not-equal]]))
+               [purnam.test :only [init describe it is is-not]]))
 
 ;; We have to initiate the jasmin test framework
 (init)
@@ -37,6 +36,5 @@
  (it "describes something"
      (is o1.0 0)
      (is o1.1 odd?)
-     (is-not   o1 (array 0 1 2 3 4))
-     (is-equal o1 (array 0 1 2 3 4))))
+     (is o1 (array 0 1 2 3 4))))
 
