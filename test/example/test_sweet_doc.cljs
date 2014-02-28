@@ -1,6 +1,6 @@
 (ns example.test-sweet-doc
-  (:use-macros [purnam.core :only [! ? f.n def.n obj arr]]
-               [purnam.test :only [fact facts]]))
+  (:require [purnam.test])
+  (:use-macros [purnam.test :only [fact facts]]))
 
 [[:chapter {:title "testing clojure"}]]
 
@@ -23,12 +23,11 @@
 
 "We now look at doing tests on native javascript objects"
 
-(def o (obj :a 1 :b 2 :c 3))
-
 (facts [[{:doc "an example test description"
           :globals [ka "a"
-                   kb "b"]
-          :vars [o (obj :a 1 :b 2 :c 3)]}]]
+                    kb "b"]
+          :vars [o (js* "{a:1,b:2,c:3}")
+                 m (js* "[[1, 2, 3], [4, 5, 6],[7, 8, 9]]")]}]]
  
  "Here are some examples"
  
@@ -38,7 +37,7 @@
 
 
  [[:subsection {:title "native and cljs comparisons"}]]
- o => (obj :a 1 :b 2 :c 3)
+ o => (js* "{a:1,b:2,c:3}")
  [1 2 3 4] => [1 2 3 4]
 
  [[:subsection {:title "function comparison"}]]
@@ -49,9 +48,6 @@
   o.|ka| => 1
   (+ o.|ka| o.|kb|) => 3
 
-  [[:subsection {:title "vars can be rebound"}]]
-  (! o (arr [1 2 3]
-            [4 5 6]
-            [7 8 9]))
+  [[:subsection {:title "matrices"}]]
           
-  (- o.2.2 o.0.0) => 8)
+  (- m.2.2 m.0.0) => 8)

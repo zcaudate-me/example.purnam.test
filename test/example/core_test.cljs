@@ -1,7 +1,7 @@
 (ns example.core-test
-  (:require [example.core :refer [add5]])
-  (:use-macros [purnam.core :only [obj arr ! f.n def.n]]
-               [purnam.test :only [describe it is is-not]]))
+  (:require [example.core :refer [add5]]
+            [purnam.test])
+  (:use-macros [purnam.test :only [describe it is is-not]]))
 
 (describe
   (it "FIX THIS: One Plus One Equals... " 
@@ -27,7 +27,7 @@
 
 (describe
  {:doc "Array Examples"
-  :globals [o1 (arr 0 1 2 3 4)]}
+  :globals [o1 (array 0 1 2 3 4)]}
  (it "describes something"
      (is o1.0 0)
      (is o1.1 odd?)
