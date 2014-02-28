@@ -1,5 +1,7 @@
 # example.purnam.test
 
+[![Build Status](https://travis-ci.org/purnam/example.purnam.test.png?branch=master)](https://travis-ci.org/purnam/example.purnam.test)
+
 Example of how to test clojurescript code using the karma test framework.
 
 ## Usage
