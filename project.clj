@@ -8,7 +8,8 @@
                  [im.chit/purnam.core "0.4.0"]]
  :profiles {:dev {:dependencies [[org.clojure/clojurescript "0.0-2138"]
                                  [midje "1.6.0"]]
-                  :plugins [[lein-cljsbuild "1.0.0"]]}}
+                  :plugins [[lein-cljsbuild "1.0.0"]
+                            [lein-midje-doc "0.0.18"]]}}
  :documentation {:files {"doc/index"
                          {:input "test/example/test_sweet_doc.cljs"
                           :title "purnam.test examples"
