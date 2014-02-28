@@ -1,15 +1,17 @@
-(defproject purnam-karma-testing "0.0.0-SNAPSHOT"
+(defproject example.purnam.test "0.0.0-SNAPSHOT"
   :description "Karma testing with clojurescript"
-  :url "https://www.github.com/zcaudate/purnam-karma-testing"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :url "https://www.github.com/zcaudate/example.purnam.test"
+  :license {:name "The MIT License"
+            :url "http://opensource.org/licencses/MIT"}
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-1978"]
-                 [im.chit/purnam "0.1.8"]]
-
+                 [im.chit/purnam.test "0.4.0"]
+                 [im.chit/purnam.core "0.4.0"]]
+ :profiles {:dev {:dependencies [[org.clojure/clojurescript "0.0-2138"]
+                                 [midje "1.6.0"]]
+                  :plugins [[lein-cljsbuild "1.0.0"]]}}
  :documentation {:files {"doc/index"
-                         {:input "test/purnam_karma_testing/test_sweet_doc.cljs"
-                          :title "purnam on karma"
+                         {:input "test/example/test_sweet_doc.cljs"
+                          :title "purnam.test examples"
                           :sub-title "testing on clojurescript"
                           :author "Chris Zheng"
                           :email  "z@caudate.me"

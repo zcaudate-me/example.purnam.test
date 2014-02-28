@@ -1,4 +1,4 @@
-# purnam-karma-testing
+# example.purnam.test
 
 Example of how to test clojurescript code using the karma test framework.
 
@@ -6,25 +6,24 @@ Example of how to test clojurescript code using the karma test framework.
 
 Clone this project and compile using cljsbuild:
 
-    > git clone https://github.com/zcaudate/purnam-karma-testing.git
-    > cd purnam-karma-testing
+    > git clone https://github.com/purnam/example.purnam.test.git
+    > cd example.purnam.test
     > lein cljsbuild auto
     
 In a new window in the same directory:
 
     > karma start
 
-Tests are defined in `test/purnam_karma_testing/core_test.cljs`.
+Tests are defined in the `test/example/` directory.
 
 ## Tutorial
 
 There is a quick video showing how to get the testing framework set up and a typical workflow:
-[![ScreenShot](https://raw.github.com/zcaudate/puram-karma-testing/master/karma-testing.png)](http://www.youtube.com/watch?v=mhBqjJUYY6w)
+[![ScreenShot](https://raw.github.com/purnam/example.purnam.test/master/karma-testing.png)](http://www.youtube.com/watch?v=9mryE5vggR0&feature=youtu.be)
 
 
 ## License
 
-Copyright © 2013 Chris Zheng
+Copyright © 2014 Chris Zheng
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the The MIT License.

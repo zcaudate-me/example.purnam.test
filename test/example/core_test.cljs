@@ -1,12 +1,7 @@
-(ns purnam-karma-testing.core-test
-  (:require [purnam.cljs :refer [aget-in aset-in]]
-            [purnam-karma-testing.core :refer [add5]])
-  (:require-macros [purnam.js :as j])
-  (:use-macros [purnam.js :only [obj arr ! f.n def.n]]
-               [purnam.test :only [init describe it is is-not]]))
-
-;; We have to initiate the jasmin test framework
-(init)
+(ns example.core-test
+  (:require [example.core :refer [add5]])
+  (:use-macros [purnam.core :only [obj arr ! f.n def.n]]
+               [purnam.test :only [describe it is is-not]]))
 
 (describe
   (it "FIX THIS: One Plus One Equals... " 
